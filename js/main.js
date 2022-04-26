@@ -50,4 +50,3 @@ function remove(id) {
     console.log(newArr)
     addNew(newArr)
 }
-console.log(newArr)
