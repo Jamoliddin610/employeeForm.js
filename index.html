@@ -76,7 +76,7 @@
                   <td>@mdo</td>
                   <td>Otto</td>
                   <td class="d-flex"><button class="td-btn emp__change"><i class="bx bx-pencil"></i></button>
-                  <button class="td-btn emp__delete"><i class="bx bx-x"></i></button></td>
+                  <button class="td-btn emp__delete" ><i class="bx bx-x"></i></button></td>
                 </tr>
               </tbody>
             </table>
@@ -96,12 +96,13 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
+          <form>
           <div class="modal__hero d-flex ">
             <div class="modal__input-group">
-              <input type="text" placeholder="Full Name" required>
-              <input type="email" placeholder="Email" required>
-              <input type="tel" placeholder="Mobile" required>
-              <input type="text" placeholder="City" required>
+              <input type="text" placeholder="Full Name" id="name" required>
+              <input type="email" placeholder="Email" id="email" required>
+              <input type="tel" placeholder="Mobile" id="tel" required>
+              <input type="text" placeholder="City" id="city"  required>
             </div>
             <div class="modal__extra">
               <h3>Gender</h3>
@@ -113,7 +114,7 @@
                 <input type="radio" name="extra" id="other">
                 <label for="other">Other</label>
               </form>
-              <input class="form-control extra-input" list="datalistOptions" id="exampleDataList" placeholder="Department" required>
+              <input class="form-control extra-input-data extra-input" list="datalistOptions" id="exampleDataList" placeholder="Department" required>
                 <datalist id="datalistOptions">
                   <option value="None">
                   <option value="Development">
@@ -122,9 +123,16 @@
                   <option value="HR">
                 </datalist>
                 <input type="date" class="extra-input" value="2022-04-01"> 
-                <form class="my-2 d-flex align-items-center gap-2"><input type="checkbox" name="check" id="check">
+                <form class="my-2 mb-4 d-flex align-items-center gap-2"><input type="checkbox" name="check" id="check">
                 <label for="check">Permanent Employee</label></form>
+                <div class="modal__btn-box d-flex align-items-center gap-2 m-1">
+                  <button type="submit" class="modal__submit">Submit</button>
+                  <button class="modal__reset">Reset</button>
+
+                </div>
+
             </div>
+          </div></form>
           </div>
         </div>
         <div class="modal-footer">
